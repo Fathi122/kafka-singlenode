@@ -28,7 +28,7 @@ public class KafkaSingleProducer {
         //Create a Kafka producer from configuration
         KafkaProducer simpleProducer = new KafkaProducer(kafkaProps);
 
-        //Publish 10 messages at 2 second intervals, with a random key
+        //Publish 10 messages at 1 second intervals, with a random key
         try {
 
             int startKey = (new Random()).nextInt(1000);
