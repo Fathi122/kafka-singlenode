@@ -3,6 +3,10 @@
 ```
  docker-compose -f kafka-single-node.yml up -d
 ```
+## Stop Kafka single node and zookeper
+```
+ docker-compose -f kafka-single-node.yml down
+```
 ## Executea shell in Kafka Container
 ```
  docker exec -it kafka-broker /bin/bash
