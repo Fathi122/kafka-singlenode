@@ -7,7 +7,7 @@
 ```
  docker-compose -f kafka-single-node.yml down
 ```
-## Executea shell in Kafka Container
+## Execute a shell in Kafka Container
 ```
  docker exec -it kafka-broker /bin/bash
 ```
