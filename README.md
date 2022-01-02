@@ -9,7 +9,7 @@
 ```
 ## Execute a shell in Kafka Container
 ```
- docker exec -it kafka-broker /bin/bash
+ docker exec -it kafka-broker bash
 ```
 ## Change directory to the Kafka Scripts
 ```
@@ -18,7 +18,7 @@
 ## Create a Topic with 2 partitions and one replication factor
 ```
  ./kafka-topics.sh \
-   --zookeeper zookeeper:2181 \
+   --bootstrap-server localhost:9092 \
    --create \
    --topic kafka.singlenode.testtopic \
    --partitions 2 \
@@ -27,19 +27,19 @@
 ## List Topics
 ```
  ./kafka-topics.sh \
-   --zookeeper zookeeper:2181 \
+   --bootstrap-server localhost:9092 \
    --list
 ```
 ## Publish Messages to Topics
 ```
   ./kafka-console-producer.sh \
-   --bootstrap-server localhost:29092 \
+   --bootstrap-server localhost:9092 \
    --topic kafka.singlenode.testtopic
 ```
 ## Consume Messages from Topics
 ```
   ./kafka-console-consumer.sh \
-   --bootstrap-server localhost:29092 \
+   --bootstrap-server localhost:9092 \
    --topic kafka.singlenode.testtopic \
    --from-beginning
 ```
